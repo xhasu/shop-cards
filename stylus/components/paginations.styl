@@ -1,0 +1,28 @@
+
+.pagination
+	display flex
+	
+	.bullet
+		position relative
+		display inline-block
+		vertical-align middle
+		size: 12px
+		margin 0 4px
+		cursor pointer
+		border-radius 100%
+		opacity .4
+		border 1px solid transparent
+		
+		&.active
+			cursor context-menu
+			border-color black
+			opacity 1
+	
+		&:before
+			content ""
+			display block
+			clear both
+			size: 4px
+			box-center()
+			border-radius 100%
+			background-color black

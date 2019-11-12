@@ -1,0 +1,73 @@
+// Buttons 
+
+reset-button()
+	display inline-block
+	background-color transparent
+	border none
+	border-radius 0px
+	margin 0
+	padding 0
+	box-sizing border-box
+	text-align center
+	text-decoration none
+	vertical-align middle
+	color black
+	cursor pointer
+	outline none
+	transition all ease-out .4s
+	zoom 1
+	
+	&:hover
+	&:focus
+		outline none
+	
+	&:disabled
+		no-actions()
+		cursor not-allowed
+
+
+.button
+	reset-button()
+	padding 4px 8px 4px
+	border-radius 4px	
+	color white	
+	background-color grey-800
+
+// button theme
+.button-invert
+	color white
+	background-color black
+
+// button styles
+.button-link
+	reset-button()
+	padding 0 12px
+	background transparent
+	color black
+	
+	&:hover
+		color blue
+
+// buton social
+.button-social
+	position relative
+	border-radius 4px
+	padding 4px 8px 4px
+	padding-left 44px
+	ellipsis()
+	
+	.icon
+		display block
+		absolute: top left bottom
+		border-right 1px solid alpha(black, .2)
+		text-align center
+		width 32px
+		font-size 18px
+		line-height 32px
+	
+for name, value in $social
+	.button-{name}
+		background-color value
+		color white
+		&:hover
+			background-color darken( value, 20% )

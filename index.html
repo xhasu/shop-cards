@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Info -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="content-type" content="text/html">
+
+	<title>Shop Card</title>
+
+	<!-- Organic -->
+	<meta name="author" content="xhasu">
+	<meta name="description" content="frontend scaffold using stylus">
+
+	<!-- Viewport responsive -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+
+	<!-- Webapp -->
+	<meta name="theme-color" content="#2196f3">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" sizes="192x192" href="webapp.png">
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Opengraph ( Facebook and google+ ) -->
+	<meta property="og:title" content="">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="">
+
+	<!-- Twitter -->
+	<meta name="twitter:title" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:card" content="">
+
+	<!-- Favicon X-icon  -->
+	<link rel="icon" href="favicon.ico?v0.1">
+
+	<!-- Plugin Style -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/dist/css/swiper.min.css"> -->
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/layout.min.css">
+	<link rel="stylesheet" href="css/application.min.css">
+
+	<!-- Custom Style -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Fonts -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/font-awesome/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700">
+
+	<!-- Script Important -->
+</head>
+<body ng-app="app">
+		
+	<!-- app -->
+	<div id="app" class="app">
+
+		<div class="shopcards-title">
+			<div class="h2">Shop Cards</div>
+			<div class="shopcards-brand">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 192.756 192.756"><g fill-rule="evenodd" clip-rule="evenodd"><path d="M42.741 71.477c-9.881 11.604-19.355 25.994-19.45 36.75-.037 4.047 1.255 7.58 4.354 10.256 4.46 3.854 9.374 5.213 14.264 5.221 7.146.01 14.242-2.873 19.798-5.096 9.357-3.742 112.79-48.659 112.79-48.659.998-.5.811-1.123-.438-.812-.504.126-112.603 30.505-112.603 30.505a24.771 24.771 0 0 1-6.524.934c-8.615.051-16.281-4.731-16.219-14.808.024-3.943 1.231-8.698 4.028-14.291z"/></g></svg>
+			</div>
+		</div>
+		
+		<div class="panel">
+			<div class="panel-container">
+
+				<!-- shop cards -->
+				<div class="shopcards">
+					<div class="cards" ng-controller="cardsController as CC">
+
+						<!-- repeatable -->
+						<div class="cards-box" ng-repeat="card in CC.data" entity-id="{{ card.id }}">
+							<div class="box-head">
+								<div class="box-title">{{ card.category }}</div>
+							</div>
+							<div class="box-media">
+								<img ng-src="{{ card.media }}">
+							</div>
+							<div class="box-pagination">
+								<div class="pagination">
+									<span class="bullet active"></span>
+									<span class="bullet"></span>
+									<span class="bullet"></span>
+								</div>
+							</div>
+							<div class="box-highlight">{{ card.type }}</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- plugins -->
+	<!-- <script src="https://unpkg.com/swiper/dist/js/swiper.min.js"></script> -->
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+	<script src="https://unpkg.com/angular/angular.min.js"></script>
+
+	<!-- user interface -->
+	<script src="js/ui.js"></script>
+</body>
+</html>
