@@ -5,7 +5,7 @@
   "icons": [
     {
       "src": "webapp.png",
-      "sizes": "192x192",
+      "sizes": "120x120",
       "type": "image/png"
     }
   ],
